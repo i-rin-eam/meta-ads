@@ -21,8 +21,11 @@ dependencies {
 > Replace meta audience network sdk version with the <a href="https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/android/add-sdk">latest available</a>
 
 <br>
+
 > **Step 2: Add it in your root `settings.gradle (Project Settings)` at the end of repositories.**
+
 ```gradle
+
     repositories {
 
         maven { url 'https://jitpack.io' }
@@ -33,6 +36,7 @@ dependencies {
 > **Step 3: Add it in your root `gradle.propertise (Project Propertise)` at the end of repositories.**
 ```gradle
 android.enableJetifier=true
+
 ```
 <br>
 
