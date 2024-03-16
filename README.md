@@ -143,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 > **Step 8: Add Interstitial Ads** <br>
-*This guide explains how to add Interstitial ads to your app.*
-`Implementing the Banner Ad in your Activity`
+*This guide explains how to add Interstitial ads to your app.* <br>
+
+`Implementing the Interstitial Ad in your Activity`
 ```java
         // Preload interstitial ad
         metaAdsManager.loadInterstitialAd();
