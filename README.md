@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Set ad placement IDs
-        MyMeta.setAdPlacementID();
+        AdManager.setAdPlacementID();
 
         // Initialize MetaAdsManager and Meta ads
         metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
