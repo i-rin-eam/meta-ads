@@ -1,0 +1,45 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.irineam.metaads'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.irineam.metaads"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation project(':meta-ads')
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    // meta audience network sdk // facebook ads sdk
+    implementation libs.annotation
+    implementation libs.audience.network.sdk
+}
