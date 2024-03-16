@@ -132,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
         metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
 ```
 <br>
-*Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses:*
+
+*Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses.*
 
 ```java
     @Override
@@ -160,7 +161,8 @@ public class MainActivity extends AppCompatActivity {
         });
 ```
 <br>
-*Lastly, add the following code to your activity's onDestroy() function to release resources the interstitial uses:*
+
+*Lastly, add the following code to your activity's onDestroy() function to release resources the interstitial uses.*
 
 ```java
     @Override
