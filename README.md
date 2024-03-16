@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/i-rin-eam/meta-ads">
-    <img src="img_url" alt="Logo" width="100" height="100">
+    <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/meta-ads.png" alt="Logo" width="100" height="100">
   </a> 
   <br>
   <a href="video_url">Watch Video for Implementing the Meta Ads Library</a>
