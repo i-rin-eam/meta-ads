@@ -10,13 +10,12 @@
 
 > **Step 1: Add the dependency in `build.gradle (Module :app)`.**
 ```gradle
-dependencies {
-
     implementation 'com.github.i-rin-eam:meta-ads:1.0.0'
     implementation 'androidx.annotation:annotation:1.0.0'
     implementation 'com.facebook.android:audience-network-sdk:6.+'
-}
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/build-gradle.png" alt="build-gradle.png">
+
 > [!NOTE]
 > Replace meta audience network sdk version with the <a href="https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/android/add-sdk">latest available</a>
 
@@ -25,19 +24,16 @@ dependencies {
 > **Step 2: Add it in your root `settings.gradle (Project Settings)` at the end of repositories.**
 
 ```gradle
-
-    repositories {
-
         maven { url 'https://jitpack.io' }
-    }
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/settings-gradle.png" alt="settings-gradle.png">
 <br>
 
-> **Step 3: Add it in your root `gradle.propertise (Project Propertise)` at the end of repositories.**
+> **Step 3: Add it in your root `gradle.propertise (Project Propertise).`**
 ```gradle
 android.enableJetifier=true
-
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/gradle-properties.png" alt="gradle-properties.png">
 <br>
 
 > **Step 4: In `AndroidManifest.xml`** <br>
@@ -54,15 +50,12 @@ android.enableJetifier=true
 
 `Enable Hardware Acceleration:` *In your AndroidManifest.xml file, add the following attribute to the `<application>` tag to enable hardware acceleration for your entire application.*
 ```xml
-<application android:hardwareAccelerated="true" ...>
+    android:hardwareAccelerated="true"
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/android-manifest-xml.jpeg" alt="android-manifest-xml.jpeg">
 
 > **Step 5: Create a Java Class (e.g. `AdManager.java`) to Set Ad Placement IDs.**
 ```java
-package com.irineam.metaads;
-
-public class AdManager {
-
     /**
      * Method to set up ad placement IDs and related settings.
      */
@@ -80,11 +73,12 @@ public class AdManager {
         AdPlacementIDManager.INTERSTITIAL_AD_CONTROLLER = true;
 
         // Test Mode and Meta Ad Settings
-        AdPlacementIDManager.SET_TEST_MODE = true; // Flag to enable test mode
+        AdPlacementIDManager.SET_TEST_MODE = true; //Change the test mode to false before releasing.
         AdPlacementIDManager.META_AD_IS_ON = true; 
     }
-}
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/ad-manager-java.png" alt="ad-manager-java.png">
+
 > **Step 6: Initialize `meta-ads` Library in your Activity or Fragment.**
 ```java
 package com.irineam.metaads;
