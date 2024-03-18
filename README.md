@@ -48,7 +48,7 @@ android.enableJetifier=true
 ```
 <br>
 
-`Enable Hardware Acceleration:` *In your AndroidManifest.xml file, add the following attribute to the `<application>` tag to enable hardware acceleration for your entire application.*
+`Enable Hardware Acceleration:` *In your `AndroidManifest.xml` file, add the following attribute to the `<application>` tag to enable hardware acceleration for your entire application.*
 ```xml
 android:hardwareAccelerated="true"
 ```
