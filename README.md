@@ -10,9 +10,9 @@
 
 > **Step 1: Add the dependency in `build.gradle (Module :app)`.**
 ```gradle
-    implementation 'com.github.i-rin-eam:meta-ads:1.0.0'
-    implementation 'androidx.annotation:annotation:1.0.0'
-    implementation 'com.facebook.android:audience-network-sdk:6.+'
+implementation 'com.github.i-rin-eam:meta-ads:1.0.0'
+implementation 'androidx.annotation:annotation:1.0.0'
+implementation 'com.facebook.android:audience-network-sdk:6.+'
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/build-gradle.png" alt="build-gradle.png">
 
@@ -24,7 +24,7 @@
 > **Step 2: Add it in your root `settings.gradle (Project Settings)` at the end of repositories.**
 
 ```gradle
-        maven { url 'https://jitpack.io' }
+maven { url 'https://jitpack.io' }
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/settings-gradle.png" alt="settings-gradle.png">
 <br>
@@ -40,11 +40,11 @@ android.enableJetifier=true
 
 `Add below Permissions.`
 ```xml
-    <!-- Permissions required by the application -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+<!-- Permissions required by the application -->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 ```
 <br>
 
