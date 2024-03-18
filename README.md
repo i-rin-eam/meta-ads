@@ -122,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
 ```
 `Implementing the Banner Ad in your Activity`
 ```java
-        // Show banner ad
-        metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
+// Show banner ad
+metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
 ```
 <br>
 
