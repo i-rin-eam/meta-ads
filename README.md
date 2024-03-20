@@ -89,7 +89,7 @@ metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/init-meta-ads.png" alt="init-meta-ads.png">
 
 ## Step 7: Add Banner Ads <br>
-*This guide explains how to add banner and medium rectangle ads to your app.*
+> *This guide explains how to add banner and medium rectangle ads to your app.*
 
 `Adding a Container for the Banner Ad in your layout file (for example: activity_main.xml)`
 ```xml
@@ -107,7 +107,9 @@ metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
 // Show banner ad
 metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
 ```
-*Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses.*
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-java.png" alt="banner-java.png">
+
+> **Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses.**
 
 ```java
     @Override
@@ -120,7 +122,7 @@ metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-java.png" alt="banner-java.png">
 
 ## Step 8: Add Interstitial Ads <br>
-*This guide explains how to add Interstitial ads to your app.* <br>
+> *This guide explains how to add Interstitial ads to your app.* <br>
 
 `Implementing the Interstitial Ad in your Activity`
 ```java
@@ -139,7 +141,7 @@ metaAdsManager.loadInterstitialAd();
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/inter-ads1.png" alt="inter-ads1.png">
 
-*Lastly, add the following code to your activity's onDestroy() function to release resources the interstitial uses.*
+> **Lastly, add the following code to your activity's onDestroy() function to release resources the interstitial uses.**
 ```java
  metaAdsManager.destroyInterstitialAd();
 ```
