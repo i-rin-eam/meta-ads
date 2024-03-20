@@ -107,8 +107,6 @@ metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
 // Show banner ad
 metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
 ```
-<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-java.png" alt="banner-java.png">
-
 > **Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses.**
 
 ```java
