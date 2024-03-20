@@ -81,38 +81,23 @@ android:hardwareAccelerated="true"
 
 > **Step 6: Initialize `meta-ads` Library in your Activity or Fragment.**
 ```java
-package com.irineam.metaads;
-
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
-
-    // Declaration of MetaAdsManager variable
-    MetaAdsManager metaAdsManager;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Set ad placement IDs
-        AdManager.setAdPlacementID();
-
-        // Initialize MetaAdsManager and Meta ads
-        metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
-
-    }
-}
+// Declaration of MetaAdsManager variable
+MetaAdsManager metaAdsManager;  
 ```
+```java   
+// Set ad placement IDs
+AdManager.setAdPlacementID();
+
+// Initialize MetaAdsManager and Meta ads
+metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
+```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/init-meta-ads.png" alt="init-meta-ads.png">
+
 > **Step 7: Add Banner Ads** <br>
 *This guide explains how to add banner and medium rectangle ads to your app.*
 
-`Adding a Layout Container for the Banner Ad`
+`Adding a Container for the Banner Ad in your layout file (for example: activity_main.xml)`
 ```xml
-    <!-- In your layout file (for example: activity_main.xml),
-    add a layout that will act as a container for your Ad.-->
     <LinearLayout
         android:id="@+id/adContainer"
         android:layout_width="match_parent"
@@ -120,13 +105,13 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignParentBottom="true"
         android:orientation="vertical" />
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-xml.png" alt="banner-xml.png">
+
 `Implementing the Banner Ad in your Activity`
 ```java
 // Show banner ad
 metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT_50);
 ```
-<br>
-
 *Lastly, add the following code to your activity's onDestroy() function to release resources the AdView uses.*
 
 ```java
@@ -137,15 +122,18 @@ metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT
         metaAdsManager.destroyBannerAd();
     }
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-java.png" alt="banner-java.png">
+
 > **Step 8: Add Interstitial Ads** <br>
 *This guide explains how to add Interstitial ads to your app.* <br>
 
 `Implementing the Interstitial Ad in your Activity`
 ```java
-        // Preload interstitial ad
-        metaAdsManager.loadInterstitialAd();
-
-        // Show interstitial ad. write this code inside click event.
+// Preload interstitial ad
+metaAdsManager.loadInterstitialAd();
+```
+```java
+        // Show the interstitial ad. Write this code inside the click event.
         metaAdsManager.showInterstitialAd(new Runnable() {
             @Override
             public void run() {
@@ -154,18 +142,14 @@ metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT
             }
         });
 ```
-<br>
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/inter-ads1.png" alt="inter-ads1.png">
 
 *Lastly, add the following code to your activity's onDestroy() function to release resources the interstitial uses.*
-
 ```java
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // Destroy interstitial ad
-        metaAdsManager.destroyInterstitialAd();
-    }
+ metaAdsManager.destroyInterstitialAd();
 ```
+<img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/inter-ads2.png" alt="inter-ads2.png">
+
 ## License
 
 Distributed under the MIT License. See <a href="https://github.com/i-rin-eam/meta-ads/blob/main/LICENSE">LICENSE</a> for more information.
