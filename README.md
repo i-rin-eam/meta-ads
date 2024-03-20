@@ -19,7 +19,7 @@ implementation 'com.facebook.android:audience-network-sdk:6.+'
 > [!NOTE]
 > Replace meta audience network sdk version with the <a href="https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/android/add-sdk">latest available</a>
 
-## Step 2: Add it in your root `settings.gradle (Project Settings)` under repositories..
+## Step 2: Add it in your root `settings.gradle (Project Settings)` under repositories.
 
 ```gradle
 maven { url 'https://jitpack.io' }
