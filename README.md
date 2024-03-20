@@ -8,7 +8,7 @@
 
 <h1 align='center'>Implement Meta Ads</h1>
 
-> **Step 1: Add the dependency in `build.gradle (Module :app)`.**
+## Step 1: Add the dependency in `build.gradle (Module :app)`.
 ```gradle
 implementation 'com.github.i-rin-eam:meta-ads:1.0.0'
 implementation 'androidx.annotation:annotation:1.0.0'
@@ -19,24 +19,20 @@ implementation 'com.facebook.android:audience-network-sdk:6.+'
 > [!NOTE]
 > Replace meta audience network sdk version with the <a href="https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/android/add-sdk">latest available</a>
 
-<br>
-
-> **Step 2: Add it in your root `settings.gradle (Project Settings)` at the end of repositories.**
+## Step 2: Add it in your root `settings.gradle (Project Settings)` under repositories..
 
 ```gradle
 maven { url 'https://jitpack.io' }
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/settings-gradle.png" alt="settings-gradle.png">
-<br>
 
-> **Step 3: Add it in your root `gradle.propertise (Project Propertise).`**
+## Step 3: Add it in your root `gradle.propertise (Project Propertise).`
 ```gradle
 android.enableJetifier=true
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/gradle-properties.png" alt="gradle-properties.png">
-<br>
 
-> **Step 4: In `AndroidManifest.xml`** <br>
+## Step 4: In `AndroidManifest.xml` <br>
 
 `Add below Permissions.`
 ```xml
@@ -46,7 +42,6 @@ android.enableJetifier=true
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
 <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 ```
-<br>
 
 `Enable Hardware Acceleration:` *In your `AndroidManifest.xml` file, add the following attribute to the `<application>` tag to enable hardware acceleration for your entire application.*
 ```xml
@@ -54,7 +49,7 @@ android:hardwareAccelerated="true"
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/android-manifest-xml.jpeg" alt="android-manifest-xml.jpeg">
 
-> **Step 5: Create a Java Class (e.g. `AdManager.java`) to Set Ad Placement IDs.**
+## Step 5: Create a Java Class (e.g. `AdManager.java`) to Set Ad Placement IDs.
 ```java
     /**
      * Method to set up ad placement IDs and related settings.
@@ -79,7 +74,7 @@ android:hardwareAccelerated="true"
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/ad-manager-java.png" alt="ad-manager-java.png">
 
-> **Step 6: Initialize `meta-ads` Library in your Activity or Fragment.**
+## Step 6: Initialize `meta-ads` Library in your Activity or Fragment.
 ```java
 // Declaration of MetaAdsManager variable
 MetaAdsManager metaAdsManager;  
@@ -93,7 +88,7 @@ metaAdsManager = new MetaAdsManager(MainActivity.this).initializeMetaAds();
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/init-meta-ads.png" alt="init-meta-ads.png">
 
-> **Step 7: Add Banner Ads** <br>
+## Step 7: Add Banner Ads <br>
 *This guide explains how to add banner and medium rectangle ads to your app.*
 
 `Adding a Container for the Banner Ad in your layout file (for example: activity_main.xml)`
@@ -124,7 +119,7 @@ metaAdsManager.showBannerAd(findViewById(R.id.adContainer), AdSize.BANNER_HEIGHT
 ```
 <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/banner-java.png" alt="banner-java.png">
 
-> **Step 8: Add Interstitial Ads** <br>
+## Step 8: Add Interstitial Ads <br>
 *This guide explains how to add Interstitial ads to your app.* <br>
 
 `Implementing the Interstitial Ad in your Activity`
