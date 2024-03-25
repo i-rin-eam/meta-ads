@@ -3,7 +3,7 @@
     <img src="https://raw.githubusercontent.com/i-rin-eam/meta-ads/main/app/src/main/res/drawable/meta-ads.png" alt="Logo" width="100" height="100">
   </a> 
   <br>
-  <a href="video_url">Watch Video for Implementing the Meta Ads Library</a>
+  <a href="www.youtube.com/@CodeCraftArena">Watch Video for Implementing the Meta Ads Library</a>
 </p>
 
 <h1 align='center'>Implement Meta Ads</h1>
